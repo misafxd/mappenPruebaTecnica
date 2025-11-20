@@ -1,13 +1,40 @@
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import Button from "../ui/Button.vue";
 import PlaneCard from "../ui/PlaneCard.vue";
-import data from "../../data.json";
 import { useBreakPoint } from "../../composables/useBreakPoint";
 
 const { isMobile } = useBreakPoint();
 
-const plans = ref(data.plans);
+const API_URL = "/api/mensualidades.json";
+const cargando = ref(true);
+const errorApi = ref(null);
+
+const plans = ref([]);
+const obtenerPlanes = async () => {
+  cargando.value = true;
+  errorApi.value = null;
+
+  try {
+    const respuesta = await fetch(API_URL);
+
+    if (!respuesta.ok) {
+      throw new Error(`Error: ${respuesta.status} ${respuesta.statusText}`);
+    }
+
+    const datos = await respuesta.json();
+    plans.value = datos.plans;
+  } catch (error) {
+    console.error("Error al obtener o procesar los datos:", error);
+    errorApi.value = "No se pudieron cargar los planes. Intenta más tarde.";
+  } finally {
+    cargando.value = false;
+  }
+};
+
+onMounted(() => {
+  obtenerPlanes();
+});
 </script>
 
 <template>
