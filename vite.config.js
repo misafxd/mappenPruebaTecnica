@@ -7,19 +7,7 @@ import vueDevTools from "vite-plugin-vue-devtools";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [vue(), vueDevTools()],
-  server: {
-    proxy: {
-      "/api": {
-        target: "https://proyectoshm.com/pruebas-hm",
 
-        changeOrigin: true,
-
-        rewrite: (path) => path.replace(/^\/api/, ""),
-
-        secure: true,
-      },
-    },
-  },
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
