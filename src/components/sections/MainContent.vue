@@ -3,10 +3,10 @@ import { ref, onMounted } from "vue";
 import Button from "../ui/Button.vue";
 import PlaneCard from "../ui/PlaneCard.vue";
 import { useBreakPoint } from "../../composables/useBreakPoint";
+import datos from "../../data-mock.json";
 
 const { isMobile } = useBreakPoint();
 
-const API_URL = "/api/mensualidades.json";
 const cargando = ref(true);
 const errorApi = ref(null);
 
@@ -16,13 +16,7 @@ const obtenerPlanes = async () => {
   errorApi.value = null;
 
   try {
-    const respuesta = await fetch(API_URL);
-
-    if (!respuesta.ok) {
-      throw new Error(`Error: ${respuesta.status} ${respuesta.statusText}`);
-    }
-
-    const datos = await respuesta.json();
+    await new Promise((resolve) => setTimeout(resolve, 1000));
     plans.value = datos.plans;
   } catch (error) {
     console.error("Error al obtener o procesar los datos:", error);
