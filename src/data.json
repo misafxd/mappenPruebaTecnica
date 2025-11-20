@@ -1,0 +1,53 @@
+{
+  "version": "1.0",
+  "plans": [
+    {
+      "id": "semestral",
+      "slug": "semestral",
+      "nombre": "Semestral",
+      "duracionMeses": 6,
+      "descripcionCorta": "Los primeros 6 meses del servicio ahorras un 15%",
+      "ahorroPorcentaje": 15,
+      "boton": {
+        "texto": "Saber más",
+        "url": "#"
+      },
+      "categorias": [],
+      "destacado": false,
+      "activo": true,
+      "orden": 1
+    },
+    {
+      "id": "12-meses",
+      "slug": "12-meses",
+      "nombre": "12 meses",
+      "duracionMeses": 12,
+      "descripcionCorta": "El primer año del servicio ahorra hasta un 25%",
+      "ahorroPorcentaje": 25,
+      "boton": {
+        "texto": "Saber más",
+        "url": "#"
+      },
+      "categorias": [],
+      "destacado": false,
+      "activo": true,
+      "orden": 2
+    },
+    {
+      "id": "24-meses",
+      "slug": "24-meses",
+      "nombre": "24 meses",
+      "duracionMeses": 24,
+      "descripcionCorta": "Obtén el 35% de descuento al contratar el servicio por dos años",
+      "ahorroPorcentaje": 35,
+      "boton": {
+        "texto": "Saber más",
+        "url": "#"
+      },
+      "categorias": ["Más popular"],
+      "destacado": true,
+      "activo": true,
+      "orden": 3
+    }
+  ]
+}
