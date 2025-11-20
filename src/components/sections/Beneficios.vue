@@ -7,28 +7,28 @@ const beneficios = {
   beneficios: [
     {
       id: 1,
-      icon: getIconURl("../../assets/iconos/icono-1.svg"),
+      icon: getIconURl("/iconos/icono-1.svg"),
       title: "Vicios ocultos",
       description:
         "Registra y da seguimiento a problemas estructurales sin complicaciones.",
     },
     {
       id: 2,
-      icon: getIconURl("../../assets/iconos/icono-2.svg"),
+      icon: getIconURl("/iconos/icono-2.svg"),
       title: "Reportes de garantías",
       description:
         "Informa fallas o desperfectos de tu unidad directamente desde la app.",
     },
     {
       id: 3,
-      icon: getIconURl("../../assets/iconos/icono-3.svg"),
+      icon: getIconURl("/iconos/icono-3.svg"),
       title: "Gestión centralizada",
       description:
         "Todo en un solo lugar, con historial y notidicaciones en tiempo real.",
     },
     {
       id: 4,
-      icon: getIconURl("../../assets/iconos/icono-4.svg"),
+      icon: getIconURl("/iconos/icono-4.svg"),
       title: "Gestión centralizada",
       description:
         "Accede y gestiona espacios comunes de manera rápida y sencilla.",

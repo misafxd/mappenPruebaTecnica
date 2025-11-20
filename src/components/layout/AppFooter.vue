@@ -10,7 +10,7 @@ const { isMobile } = useBreakPoint();
     <div class="container">
       <div class="footer-top">
         <div class="alert-badge">
-          <img src="@/assets/iconos/Vector.svg" alt="reloj" />
+          <img src="@/assets/Vector.svg" alt="reloj" />
           <span>Oferta válida sólo durante el black friday</span>
         </div>
 
